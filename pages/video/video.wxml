@@ -9,6 +9,24 @@
 
 <!-- 使用腾讯插件引用视频 -->
 <!-- https://v.qq.com/x/page/o0942z8a9us.html -->
-<txv-video vid="o0942z8a9us" playerid="txv1">
+<!-- <txv-video vid="o0942z8a9us" playerid="txv1">
+</txv-video> -->
+<wxs module="formatData">
+  module.exports=function(timestamp){
+    var date = getDate(timestamp);
+    var y = date.getFullYear();
+    var m = date.getMonth()+1;
+    var d = date.getDate();
+    var h = date.getHours();
+    var i = date.getMinutes();
+    var s = date.getSeconds();
+    return y+'-'+m+'-'+d+''+h+':'+i+':'+s
+  }
+</wxs>
+<view class="video-list" wx:for="{{movieList}}" wx:key="user">
+  <view class="video-title">标题：{{item.title}}</view>
+  <!-- <view class="video-time">时间：{{formatData(item.create_time)}}</view> -->
+  <view class="video-time">时间：{{item.create_time}}</view>
 
-</txv-video>
+  <video src="{{item.src}}" objectFit="fill"></video>
+</view>

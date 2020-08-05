@@ -19,11 +19,11 @@ Page({
       }
     ],
     movieList:[{
-      create_time:'2018-7-28 19:55:54',
+      create_time:'1532519734589',
       title:'海边随拍',
       src:'http://vjs.zencdn.net/v/oceans.mp4'
     },{
-      create_time:'2018-8-28 19:55:54',
+      create_time:'1532519777690',
       title:'天空之城',
       src:'http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
     }]
@@ -42,10 +42,11 @@ Page({
    */
   onReady: function () {
     // this.videoContext = wx.createAudioContext('myVideo')
-    const TxvContent = requirePlugin('tencentvideo');
-    var txvContent = TxvContent.getTxvContext('txv1');
-    txvContent.play()//播放
-    txvContent.pause()//暂停
+    //腾讯插件
+    // const TxvContent = requirePlugin('tencentvideo');
+    // var txvContent = TxvContent.getTxvContext('txv1');
+    // txvContent.play()//播放
+    // txvContent.pause()//暂停
   },
   bindInputBlur:function(e){
     this.inputValue = e.detail.value;
