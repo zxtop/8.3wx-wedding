@@ -1,0 +1,14 @@
+<!-- 使用video方式引入视频 -->
+<!-- <video id="myVideo" src="{{src}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+<input bindblur="bindInputBlur"></input>
+<button bindtap="bindSendDanmu">发送弹幕</button> -->
+
+<!-- 本地获取视频 -->
+<!-- <button bindtap="bindButtonTap" style="margin-top:20rpx">获取视频</button> -->
+
+
+<!-- 使用腾讯插件引用视频 -->
+<!-- https://v.qq.com/x/page/o0942z8a9us.html -->
+<txv-video vid="o0942z8a9us" playerid="txv1">
+
+</txv-video>
