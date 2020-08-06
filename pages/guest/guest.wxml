@@ -1,2 +1,30 @@
 <!--pages/guest/guest.wxml-->
-<text>pages/guest/guest.wxml</text>
+<!-- <picker range="{{array}}" value="{{index}}" bindchange="pickerChange">
+  <view>当前选择：{{array[index]}}点我修改</view>
+</picker> -->
+
+<image class="bg" src="/images/bj_2.png"></image>
+<form bindsubmit="formSubmit"  report-submit>
+  <view class="content">
+
+    <view>
+      <input name="name" placeholder-class="phcolor" placeholder="输入您的姓名" bindblur="nameChange"></input>
+    </view>
+
+    <view>
+      <input name="phone" placeholder="输入您的手机号" placeholder-class="phcolor" bindblur="phoneChange"></input>
+    </view>
+
+    <picker name="num" bindchange="pickerChange" value="{{picker.index}}" range="{{picker.arr}}">
+      参加婚礼人数：{{picker.arr[picker.index]}}
+    </picker>
+
+    <view>
+      <input name="wish" placeholder-class="phcolor" placeholder="输入您的祝福语"></input>
+    </view>
+
+    <button form-type="submit">提交</button>
+
+  </view>
+
+</form>

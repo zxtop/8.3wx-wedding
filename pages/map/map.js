@@ -5,9 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    latitude:40.06021,
+    longitude:116.3433,
+    markers:[{
+      iconPath:'/images/navi.png',
+      id:0,
+      latitude:40.06021,
+      longitude:116.3433,
+      width:50,
+      height:50
+    }]
   },
-
+  markertap:function(){
+    wx.openLocation({
+      latitude: this.data.latitude,
+      longitude: this.data.longitude,
+      name:'**酒店',
+      address:'北京市海淀区**路'
+    })
+  },
+  buttonTap:function(){
+    wx.getLocation({
+      type: 'gcj02',
+      success:function(res){
+        wx.openLocation({
+          latitude: res.latitude,
+          longitude: res.longitude,
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
